@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sc-configuration>
+
+	<interceptoer name="log" class="" predo="preAction" afterdo="afterAction"/>
+	
+	<controller>
+		<action name="login" class="water.ustc.action.LoginAction" method="handleLogin">
+			<interceptor-ref name="log"/>
+			<result name="success" type="forward" value="success.jsp"></result>
+		</action>
+		<action name="register" class="water.ustc.action.RegisterAction" method="handleRegister">
+			<result name="success" type="redirect" value="success.jsp"></result>
+		</action>
+			
+	</controller>
+
+</sc-configuration>
